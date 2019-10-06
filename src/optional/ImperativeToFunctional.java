@@ -2,6 +2,8 @@ package optional;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ImperativeToFunctional {
 
@@ -18,9 +20,18 @@ public class ImperativeToFunctional {
 		}
 
 		/* 1. Predict the result without running the code. */
-		
+		//8
+		System.out.println(result);
 
 		/* 2. Write a functional alternative using the filter method. */
+		Stream<Integer> numbersAsStream = numbers.stream();
+		List<Integer> filteredNumbers = numbersAsStream
+				.filter(num -> num > 5)
+				.filter(num -> num % 2 == 0)
+				.filter(num -> num < 9)
+				.filter(num -> num * 2 > 15)
+				.collect(Collectors.toList());
+		System.out.println(filteredNumbers);
 
 		
 		/*

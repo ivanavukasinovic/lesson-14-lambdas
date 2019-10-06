@@ -1,5 +1,7 @@
 package exercises;
 
+import java.text.NumberFormat;
+
 public class Planet {
 	
 	private int distanceFromSun; //Average distance in millions of kilometers
@@ -15,5 +17,24 @@ public class Planet {
 		this.volume = volume;
 		this.satellites = satellites;
 	}
+	
+	public String toString() {
+		return "\n" + this.name + " - " + this.distanceFromSun + " km from the sun; volume: "
+				+ this.volume + "; " + this.satellites + " satellites";
+	}
+
+	public int getDistanceFromSun() {
+		return distanceFromSun;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getVolume() {
+		return volume;
+	}
+	
+	
 	
 }
